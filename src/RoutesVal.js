@@ -5,6 +5,7 @@ import About from './Components/About';
 import Contact from './Components/Contact';
 import Employee from './Components/Employee';
 import Navbar from './Navbar';
+import Post from "./Components/Post";
 
 const RoutesVal = () => {
     return (
@@ -23,6 +24,7 @@ const RoutesVal = () => {
                 <Route path='/about' element={<About />} />
                 <Route path='/contact' element={<Contact />} />
                 <Route path='/employee' element={<Employee />} />
+                <Route path='/employee/:post_id' element={<Post />} />
             </Routes>
 
         </BrowserRouter>

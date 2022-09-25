@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from 'axios';
+import { Link } from "react-router-dom";
 
 const Employee = () => {
     const [post, setPost] = useState([]);
@@ -16,7 +17,7 @@ const Employee = () => {
     const postList = (post.length) ? (post.map((info) => {
         return (
             <React.Fragment key={info.id}>
-                <p>Title: {info.title}</p>
+                <p><Link to={'/employee/' + info.id}>Title: {info.title}</Link></p>
                 <p>Body: {info.body}</p>
             </React.Fragment>
         )
